@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="./vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Homework 3 / Final Project</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Audiowide&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <script type="module" src="./main.ts"></script>
+
+    <div id = "piano">
+      <div id = "waveshape">
+        <p>Waveshape: </p>
+        <input type="radio" id="sine" name = "waveshape" value="sine">
+        <label for="sine">Sine</label>
+
+        <input type="radio" id="square" name = "waveshape" value="square">
+        <label for="square">Square</label>
+
+        <input type="radio" id="sawtooth" name = "waveshape" value="sawtooth">
+        <label for="sawtooth">Sawtooth</label>
+
+        <input type="radio" id="triangle" name = "waveshape" value="triangle">
+        <label for="triangle">Triangle</label>
+      </div>
+
+      <div id = sliders>
+        <p>Volume: </p>
+        <input type="range" min="0" max="1" value=".5" step = ".1" class="slider" id="volume">
+
+        <p>Detune: </p>
+        <input type="range" min="-100" max="100" value="0" step = "10" class="slider" id="detune">
+
+        <p>Pan: </p>
+        <input type="range" min="-1" max="1" value="0" step = ".1" class="slider" id="pan">
+      </div>
+
+      <div id = "bottom">
+        <h1>Web App<br>Synth</h1>
+
+        <canvas id = "waveform">Waveform Analysis</canvas>
+
+        <label for="octave">Octave:</label>
+        <input type="number" id="octave" name="octave" min="-1" max="1" />
+      </div>
+
+      <div id = "keys">
+        <button id = 261.63 class = "key white"> c </button>
+        <button id = 277.18 class = "key black"> c# </button>
+        <button id = 293.66 class = "key white"> d </button>
+        <button id = 311.13 class = "key black"> d# </button>
+        <button id = 329.63 class = "key white"> e </button>
+        <button id = 349.23 class = "key white"> f </button>
+        <button id = 369.99 class = "key black"> f# </button>
+        <button id = 392.00 class = "key white"> g </button>
+        <button id = 415.30 class = "key black"> g# </button>
+        <button id = 440.00 class = "key white"> a </button>
+        <button id = 466.16 class = "key black"> a# </button>
+        <button id = 493.88 class = "key white"> b </button>
+        <button id = 523.25 class = "key white"> c </button>
+      </div>
+    </div>
+  </body>
+</html>
